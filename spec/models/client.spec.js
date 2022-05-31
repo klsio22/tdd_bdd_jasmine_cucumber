@@ -1,4 +1,4 @@
-const Client= require ("../../models/client");
+const Client = require('../../models/client');
 
 describe('Clients', () => {
   beforeEach(() => {
@@ -15,5 +15,11 @@ describe('Clients', () => {
   it('Return all clients', () => {
     let clients = Client.all();
     expect(clients.length).toEqual(10);
+  });
+
+  it('Name client uppercase', () => {
+    let client = Client.fistClient();
+    client.name = "danilo";
+    expect(client.nameUppercase()).toEqual('DANILO');
   });
 });

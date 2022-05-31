@@ -5,6 +5,10 @@ module.exports = class Client {
     this.phone = '';
   }
 
+   nameUppercase() {
+    return this.name.toUpperCase();
+  }
+
   static fistClient() {
     return new Client();
   }
